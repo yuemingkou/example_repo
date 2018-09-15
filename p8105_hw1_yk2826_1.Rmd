@@ -29,3 +29,11 @@ types_df = tibble(
 )
 ```
 
+The chunk below try to take the mean of each variable in types_df
+
+```{r}
+mean(types_df$vec_unif)
+mean(types_df$vec_logical)
+mean(types_df$vec_char)
+mean(types_df$vec_factor)
+```
