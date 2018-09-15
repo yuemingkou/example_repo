@@ -133,4 +133,12 @@ legend("bottomright", pch = 1, col = c("red","blue"), legend = c("x + y > 0","x 
 
 ```
 
+The chunk below makes a scatterplot of y vs x; color points using the factor variable.
+
+```{r}
+with(plot_df, plot(x, y, type = "n")) 
+with(subset(plot_df, plot_factor == 'TRUE'), points(x, y, col = 'red'))
+with(subset(plot_df, plot_factor == 'FALSE'), points(x, y, col = 'blue'))
+legend("bottomright", pch = 1, col = c("red","blue"), legend = c("x + y > 0","x + y < 0"))
+```
 
