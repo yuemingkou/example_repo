@@ -119,7 +119,7 @@ ggplot(subset(plot_df, plot_logical == 'FALSE'), aes(x, y, col = 'blue')) + geom
 with(plot_df, plot(x, y, type = "n")) 
 with(subset(plot_df, plot_logical == 'TRUE'), points(x, y, col = 'red'))
 with(subset(plot_df, plot_logical == 'FALSE'), points(x, y, col = 'blue'))
-legend("bottomright", pch = 1, col = c("red","blue"), legend = c("x + y > 0","x + y < 0"))
+legend("bottomright", pch = 1, col = c("red","blue"), legend = c("plot_logical = 'TRUE'", "plot_logical = 'FALSE'"))
 
 ```
 
@@ -129,7 +129,7 @@ The chunk below makes a scatterplot of y vs x; color points using the numeric va
 with(plot_df, plot(x, y, type = "n")) 
 with(subset(plot_df, plot_numeric == '1'), points(x, y, col = 'red'))
 with(subset(plot_df, plot_numeric == '0'), points(x, y, col = 'blue'))
-legend("bottomright", pch = 1, col = c("red","blue"), legend = c("x + y > 0","x + y < 0"))
+legend("bottomright", pch = 1, col = c("red","blue"), legend = c("plot_numeric = '1'","plot_numeric = '0'"))
 
 ```
 
@@ -139,6 +139,5 @@ The chunk below makes a scatterplot of y vs x; color points using the factor var
 with(plot_df, plot(x, y, type = "n")) 
 with(subset(plot_df, plot_factor == 'TRUE'), points(x, y, col = 'red'))
 with(subset(plot_df, plot_factor == 'FALSE'), points(x, y, col = 'blue'))
-legend("bottomright", pch = 1, col = c("red","blue"), legend = c("x + y > 0","x + y < 0"))
+legend("bottomright", pch = 1, col = c("red","blue"), legend = c("plot_factor = 'TRUE'","plot_factor = 'FALSE'"))
 ```
-
