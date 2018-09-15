@@ -10,7 +10,7 @@ library(tidyverse)
 # Problem 1
 ## This problem focuses on variable types and coercion.
 
-First we create a data frame comprised of:
+First I create a data frame comprised of:
 
 
 A random sample of size 10 from a uniform[0, 5] distribution
@@ -73,7 +73,7 @@ Notice that NAs introduced by coercion when converting the factor variable from 
 # Problem 2
 ## This problem focuses on plotting and the use of inline R code.
 
-First we create a data frame comprised of:
+First I create a data frame comprised of:
 
 
 x: a random sample of size 1000 from a standard Normal distribution
@@ -92,10 +92,19 @@ set.seed(1)
 plot_df = tibble(
   x = rnorm(1000),
   y = rnorm(1000),
-  plot_logical = x+y > 0,
+  plot_logical = x + y > 0,
   plot_numeric = as.numeric(plot_logical),
   plot_factor = as.factor(plot_logical)
 )
 
 ```
+
+First I write a short description of my vector using inline R code.
+
+The size of the dataset is `r length(plot_df)`.
+
+The mean of x is `r mean(plot_df$x)`.
+
+The median of x is `r median(plot_df$x)`.
+
 
