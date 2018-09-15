@@ -108,3 +108,18 @@ The mean of x is `r mean(plot_df$x)`.
 The median of x is `r median(plot_df$x)`.
 
 
+
+The chunk below makes a scatterplot of y vs x; color points using the logical variable.
+
+```{r}
+ggplot(plot_df, aes(x, y, type = "n"))
+ggplot(subset(plot_df, plot_logical == 'TRUE'), aes(x, y, col = 'red')) + geom_point()
+ggplot(subset(plot_df, plot_logical == 'FALSE'), aes(x, y, col = 'blue')) + geom_point()
+
+with(plot_df, plot(x, y, type = "n")) 
+with(subset(plot_df, plot_logical == 'TRUE'), points(x, y, col = 'red'))
+with(subset(plot_df, plot_logical == 'FALSE'), points(x, y, col = 'blue'))
+legend("bottomright", pch= 1, col=c("red","blue"), legend = c("x + y > 0","x + y < 0"))
+
+```
+
