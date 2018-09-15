@@ -109,7 +109,7 @@ The median of x is `r median(plot_df$x)`.
 
 
 
-The chunk below makes a scatterplot of y vs x; color points using the logical variable.
+The chunk below makes a scatterplot of y vs x; color points using the logical variable；exports the scatterplot.
 
 ```{r}
 ggplot(plot_df, aes(x, y, type = "n"))
@@ -120,6 +120,7 @@ with(plot_df, plot(x, y, type = "n"))
 with(subset(plot_df, plot_logical == 'TRUE'), points(x, y, col = 'red'))
 with(subset(plot_df, plot_logical == 'FALSE'), points(x, y, col = 'blue'))
 legend("bottomright", pch = 1, col = c("red","blue"), legend = c("plot_logical = 'TRUE'", "plot_logical = 'FALSE'"))
+ggsave("scatter_logical.pdf", height = 4, width = 6)
 
 ```
 
