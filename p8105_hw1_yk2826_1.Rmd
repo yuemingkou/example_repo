@@ -24,8 +24,10 @@ A (length-10) factor vector
 types_df = tibble(
   vec_unif = runif(10, min = 0, max = 5),
   vec_logical = vec_unif > 2,
-  vec_char = c("My", "name", "is", "Yueming", "Kou", "and", "I", "love", "Data", "Science"),
-  vec_factor = factor(c("white", "black", "red", "orange", "yellow", "green", "blue", "purple", "grey", "pink"))
+  vec_char = c("My", "name", "is", "Yueming", "Kou", "and", "I", "love", "Data", 
+               "Science"),
+  vec_factor = factor(c("white", "black", "red", "orange", "yellow", "green", "blue", 
+                        "purple", "grey", "pink"))
 )
 ```
 
@@ -65,3 +67,4 @@ factor_to_char
 as.numeric(factor_to_char)
 ```
 
+Notice that NAs introduced by coercion when converting the factor variable from factor to charcter to numeric.
