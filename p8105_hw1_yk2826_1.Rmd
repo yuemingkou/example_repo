@@ -57,9 +57,11 @@ Notice that NAs introduced by coercion when applying the "as.numeric" function t
 The chunk below converts the character variable from character to factor to numeric; similarly, converts the factor variable from factor to character to numeric.
 
 ```{r}
-as.factor(types_df$vec_char)
-as.numeric(types_df$vec_char)
-as.character(types_df$vec_factor)
-as.numeric(types_df$vec_factor)
+char_to_factor = as.factor(types_df$vec_char)
+char_to_factor
+as.numeric(char_to_factor)
+factor_to_char = as.character(types_df$vec_factor)
+factor_to_char
+as.numeric(factor_to_char)
 ```
 
