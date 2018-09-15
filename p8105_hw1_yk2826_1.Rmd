@@ -37,3 +37,7 @@ mean(types_df$vec_logical)
 mean(types_df$vec_char)
 mean(types_df$vec_factor)
 ```
+
+The "mean()" function works for the random sample and the logical vector,
+but it doesn't work for the character vector and the factor vector.
+The reason is elements of the character vector and the factor vector are not numeric or logical.
