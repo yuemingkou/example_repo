@@ -11,6 +11,7 @@ library(tidyverse)
 
 The chunk below creates a data frame comprised of:
 
+
 A random sample of size 10 from a uniform[0, 5] distribution
 
 A logical vector indicating whether elements of the sample are greater than 2
